@@ -1,13 +1,13 @@
 <x-dashboard-layout>
     <div class="row justify-content-center">
-        <div class="col-12 col-lg-10 pt-4 mb-4">
+        <div class="col-12 col-lg-11 pt-4 mb-4">
             <h2 class="text-white mb-1 fw-normal">Goals</h2>
         </div>
     </div>
 
     @if (session('success'))
         <div id="alert" class="row justify-content-center">
-            <div class="col-12 col-lg-10 pt-4 mb-3">
+            <div class="col-12 col-lg-11 pt-4 mb-3">
                 <div id="alert" class="alert alert-success alert-dismissible fade show" role="alert">
                     {{ session('success') }}
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
@@ -18,7 +18,7 @@
 
     @if (session('error'))
         <div id="alert" class="row justify-content-center">
-            <div class="col-12 col-lg-10 pt-4 mb-3">
+            <div class="col-12 col-lg-11 pt-4 mb-3">
                 <div id="alert" class="alert alert-danger alert-dismissible fade show" role="alert">
                     {{ session('error') }}
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
