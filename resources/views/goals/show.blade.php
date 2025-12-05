@@ -41,10 +41,10 @@
                                 <p class="text-white mb-0">Invested</p>
                                 <p @class([
                                     'mb-0',
-                                    'text-primary' => $goal->transactions_sum_amount < 0,
-                                    'text-white-65' => $goal->transactions_sum_amount == 0,
+                                    'text-primary' => request()->sum < 0,
+                                    'text-white-65' => request()->sum == 0,
                                     ])>
-                                    ${{ number_format(abs($goal->transactions_sum_amount), 2) }}
+                                    ${{ number_format(abs(request()->sum), 2) }}
                                 </p>
                             </li>
                             <li class="list-group-item d-flex justify-content-between py-3 border-white border-opacity-25">

@@ -35,7 +35,7 @@
                         <div @class(['d-none' => $goals->isEmpty(), 'd-flex bg-dark-green rounded-1 px-2'])>
                             <ul class="list-group w-100">
                                 @foreach($goals as $goal)
-                                    <a href="{{ route('goals.show', $id = $goal->id) }}" class="text-decoration-none">
+                                    <a href="{{ route('goals.show', ['goal' => $goal->id, 'sum' => $goal->transactions_sum_amount]) }}" class="text-decoration-none">
                                         <li @class(['list-group-item d-flex justify-content-between py-4 border-white border-opacity-25',
                                 'border-bottom' => !$loop->last])>
                                             <p class="text-white mb-0">{{ $goal->description }}</p>
