@@ -82,7 +82,7 @@ class GoalController extends Controller
 
     public function show(Goal $goal)
     {
-        $goal = Auth::user()->goals()->find($goal->id)->withSum('transactions', 'amount')->firstOrFail();
+        $goal = Auth::user()->goals()->where('id', $goal->id)->withSum('transactions', 'amount')->firstOrFail();
 
         return view('goals.show', compact('goal'));
     }
